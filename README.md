@@ -1,4 +1,4 @@
-# Python Temel Konu
+#Python Temel Konu
 Bu Repo konu anlatmaya yönelik bir Repo'dur. 
 Sadık Turan sayesinde öğrendiğim ve faydalı gördüğüm Python dosyalarını, alakalı linkleri buraya atmaya çalışacağım.
 
@@ -35,7 +35,7 @@ result = x > 5 or x % 2 == 0 #True, and olursa False olur.
 
 result = not(x > 5) #False 
 
-# x, 5-10 arasında olan bir çift sayı mı?
+#x, 5-10 arasında olan bir çift sayı mı?
 
 result = x > 5 and x < 10 and x % 2 == 0 #True döner
 result = x < 5 and x < 10 and x % 2 == 0 #False döner
@@ -113,15 +113,15 @@ Eğer Kilo:62 ve Boy:1.73 yazarsak normal: True olarak dönecektir.
 
 **********************************************************************************
 
-# #Identify Operator: is
-# x = y = [1, 2, 3]
-# z = [1, 2, 3]
+##Identify Operator: is
+#x = y = [1, 2, 3]
+#z = [1, 2, 3]
 
-# print(x==y) #True
-# print(x==z) #True
+#print(x==y) #True
+#print(x==z) #True
 
-# print(x is y) #True değer döner
-# print(x is z) #False değer döner  çünkü değerlere bakmaz x ve y nin kendisine bakar.
+#print(x is y) #True değer döner
+#print(x is z) #False değer döner  çünkü değerlere bakmaz x ve y nin kendisine bakar.
 
 x =[1,2,3]
 y =[2,4]
@@ -150,7 +150,7 @@ if 3 > 3:
 
 isLoggedin = True
 if isLoggedin:
-     print('aaaa') # 'aaaa' değerini döndürür. Fakat 'False' yaparsak değer dönmez.
+     print('aaaa') #'aaaa' değerini döndürür. Fakat 'False' yaparsak değer dönmez.
 
 
 **********************************************************************************
@@ -205,9 +205,9 @@ else:
 
 **********************************************************************************
 
-# 1- Kullanıcıdan isim, yaş ve eğitim bilgilerini isteyip ehliyet alabilme
-#   durumunu kontrol ediniz. Ehliyet alma kosulu en az 18 ve eğitim durumu
-#   lise ya da üniversite olmalıdır. 
+#1- Kullanıcıdan isim, yaş ve eğitim bilgilerini isteyip ehliyet alabilme
+#durumunu kontrol ediniz. Ehliyet alma kosulu en az 18 ve eğitim durumu
+#lise ya da üniversite olmalıdır. 
 from unicodedata import name
 
 
@@ -215,10 +215,10 @@ isim = input('isminiz: ')
 yas = int(input('Yaşınız: '))
 egitim = input('Eğitim: ')
 
-# if (yas > 18) and (egitim == 'lise' or egitim =='üniversite'):
-#     print('Ehliyet alabilirsiniz.') #Yaş 18 den büyük ve eğitimin lise veya üniversite olması gerekmektedir.
-# else:
-#     print('Ehliyet alamazsınız.')
+#if (yas > 18) and (egitim == 'lise' or egitim =='üniversite'):
+#  print('Ehliyet alabilirsiniz.') #Yaş 18 den büyük ve eğitimin lise veya üniversite olması gerekmektedir.
+#else:
+#  print('Ehliyet alamazsınız.')
 
 #Ehliyetin neyden dolayı alınamadığını öğrenmek için
 if (yas > 18):
@@ -232,14 +232,14 @@ else:
 
 **********************************************************************************
 
-# 2- Bir öğrencinin 2 yazılı bir sözlü notunu alıp hesaplanan ortalamaya göre
-#     not aralığına karşılık gelen not bilgisini yazdırınız.
-#     0 - 24 => 0
-#     25-44 => 1
-#     45-54 => 2
-#     55-69 => 3
-#     70-84 => 4
-#     3 85-100 => 5
+#2- Bir öğrencinin 2 yazılı bir sözlü notunu alıp hesaplanan ortalamaya göre
+#  not aralığına karşılık gelen not bilgisini yazdırınız.
+#  0 - 24 => 0
+#  25-44 => 1
+#  45-54 => 2
+#  55-69 => 3
+#  70-84 => 4
+#  3 85-100 => 5
 yazili1 = int(input('1.Yazılı: '))
 yazili2 = int(input('2.Yazılı: '))
 sozlu = int(input('Sözlü: '))
@@ -264,21 +264,21 @@ else:
 
 **********************************************************************************
 
-# 3- Trafiğe çıkış tarihi alınan bir aracın servis zamanını aşağıdaki bilgilere
-#    göre hesaplayinız.
-#    1. Bakım => 1. yıl
-#    2. Bakım => 2. yıl
-#    3. Bakım => 3. yıl
-#      ** Süre hesabını alınan gün, ay, yıl bilgisine göre gün bazlı hesaplayınız      
-#      *** datetime modülünü kullanmanız gerekiyor.
-#     (simdi) - (2018/8/1) => gün
+#3- Trafiğe çıkış tarihi alınan bir aracın servis zamanını aşağıdaki bilgilere
+# göre hesaplayinız.
+# 1. Bakım => 1. yıl
+# 2. Bakım => 2. yıl
+# 3. Bakım => 3. yıl
+#   ** Süre hesabını alınan gün, ay, yıl bilgisine göre gün bazlı hesaplayınız      
+#   *** datetime modülünü kullanmanız gerekiyor.
+#  (simdi) - (2018/8/1) => gün
 import datetime #Modül Kullanma
 
 tarih = input('Aracınız hangi tarihte trafiğe çıktı (2019/8/9): ')
 tarih = tarih.split('/')
-# print(tarih[0]) #2019
-# print(tarih[1]) #8
-# print(tarih[2]) #9 oalrak yazdırır.
+#print(tarih[0]) #2019
+#print(tarih[1]) #8
+#print(tarih[2]) #9 oalrak yazdırır.
 
 trafigecikis = datetime.datetime(int(tarih[0]),int(tarih[1]),int(tarih[2]))
 simdi = datetime.datetime.now() #datetime.now() modülü kodun derlendiği anın saat ve tarihini yazdırır.
@@ -387,8 +387,8 @@ final = float(input('final : '))
 
 ortalama = ((vize1+vize2)/2)*0.6 + (final * 0.4)
 
-# result = (ortalama>=50) and (final>=50)
-# result = (ortalama >=50) or (final>=70)
+#result = (ortalama>=50) and (final>=50)
+#result = (ortalama >=50) or (final>=70)
 
 if ortalama >= 50:
     if final >= 50:
@@ -402,11 +402,11 @@ else:
 numbers = [1,2,3,4,5]
 
 #Eğer for döngüsü olmasaydı bunların hepsini elle yazmak zorunda kalacaktık.
-# print(numbers[0]) #1
-# print(numbers[1]) #2
-# print(numbers[2]) #3
-# print(numbers[3]) #4
-# print(numbers[4]) #5 çıktılarını verirler 
+#print(numbers[0]) #1
+#print(numbers[1]) #2
+#print(numbers[2]) #3
+#print(numbers[3]) #4
+#print(numbers[4]) #5 çıktılarını verirler 
 for num in numbers:
     print(num) #Yine aynı çıktıyı verir. Daha kısa.
 
@@ -449,27 +449,27 @@ for key,value in d.items():
 
 sayilar = [1,3,5,7,9,12,19,21] 
 
-# 1- Sayilar listesindeki hangi sayılar 3'ün katıdır ?
+#1- Sayilar listesindeki hangi sayılar 3'ün katıdır ?
 for sayi0 in sayilar:
     if (sayi0 % 3 == 0):
         print(sayi0) #3 9 12 21 çıktısını verir.
 
 
-# 2- Sayilar listesinde sayıların toplamı kaçtır ?
+#2- Sayilar listesinde sayıların toplamı kaçtır ?
 toplam = 0
 for sayi1 in sayilar:
     toplam += sayi1
 print('Toplam: ',toplam) #77 değerini verir.
     
 
-# 3- Sayilar listesindeki tek sayıların karesini alınız.
+#3- Sayilar listesindeki tek sayıların karesini alınız.
 for sayi2 in sayilar:
     if (sayi2 % 2 == 1): #Tek olduğunu anlmak için 2 bölümğnden kalan 1 olmalıdır.
         print(sayi2 ** 2) #1 9  25 49 81 361 441 çıktısını verir
 
 **********************************************************************************
 
-# 4- Şehirlerden hangileri en fazla 5 karakterlidir ?
+#4- Şehirlerden hangileri en fazla 5 karakterlidir ?
 
 from unicodedata import name
 
@@ -489,35 +489,35 @@ urunler = [
     {'name':'samsung S9' , 'price': '6000' },
     {'name':'samsung S10', 'price': '7000' }
 ]
-# 5- Ürünlerin fiyatları toplamı nedir ?
+#5- Ürünlerin fiyatları toplamı nedir ?
 toplam = 0
 for urun in urunler:
     fiyat = int(urun['price'])
     toplam += fiyat
 print('Toplam ürün fiyatı:',toplam) #25000 yazdırır.
 
-# 6- Ürünlerden fiyatı en fazla 5000 olan ürünleri gösteriniz ?
+#6- Ürünlerden fiyatı en fazla 5000 olan ürünleri gösteriniz ?
 for urunfiyat in urunler:
     if int(urunfiyat['price']) <= 5000:
         print(urunfiyat['name'])
-        # samsung S6
-        # samsung S7
-        # samsung S8
+        #samsung S6
+        #samsung S7
+        #samsung S8
 
 **********************************************************************************
 
 #0-100 e kadar yazdırma
 
-# x = 0
+#x = 0
 
-# while x <= 100: #100 e kadar (dahil) anlamına gelir.
-#     if x % 2 == 0: #Koşul eklenebilir Burada sadece çift sayıları alır.
-#         print(f'Sayı çifttir: {x}') #Ör: Sayı çifttir: 10
-#     else:
-#         print(f'Sayı tektir: {x}') #Ör: Sayı tektir: 11
-#     x += 1 # x = x + 1 anlamına gelmekte ve her adımda 1 artar.
+#while x <= 100: #100 e kadar (dahil) anlamına gelir.
+#  if x % 2 == 0: #Koşul eklenebilir Burada sadece çift sayıları alır.
+#      print(f'Sayı çifttir: {x}') #Ör: Sayı çifttir: 10
+#  else:
+#      print(f'Sayı tektir: {x}') #Ör: Sayı tektir: 11
+#  x += 1 #x = x + 1 anlamına gelmekte ve her adımda 1 artar.
 
-# print('Döngü bitti...')
+#print('Döngü bitti...')
 
 name = '' #Boşlık False anlamına gelir.
 #Eğer not name denilirse False ın değili yani True değer döner.
@@ -530,45 +530,45 @@ print(f'Merhaba, {name}')
 **********************************************************************************
 sayilar = [1,3,5,7,9,12,19,21]
 
-# 1: sayilar listesini while ile ekrana yazdırın.
-# i = 0
-# while(i < len(sayilar)):
-#     print(sayilar[i])
-#     i += 1
+#1: sayilar listesini while ile ekrana yazdırın.
+#i = 0
+#while(i < len(sayilar)):
+#  print(sayilar[i])
+#  i += 1
 
-# 2: Başlangıç ve bitiş değerlerini kullanıcıdan alıp aradaki tüm tek sayıları ekrana yazdıirın.
-# baslangic = int(input('Başlangıç: '))
-# bitis = int(input('Bitiş: '))
-# i = baslangic
-# while i < bitis:    #Bitişe kadar devam etsin.
-#     i += 1          #Her seferinde 1 artar.
-#     if i % 2 == 1:  #Tek sayıları yazdrımak için kullanılır.
-#         print(i)    #Başlangıç değerden bitiş değerine kadar tüm sayıları yazar.
-
-
-# 3: 1-100 arasındaki sayıları azalan şekilde yazdırın.
-# i = 100 #Normlade 0 dan 100 yazdırmak için i=0 olurdu tam tersi yazılacak
-# while i > 0: 
-#     print(i)
-#     i -= 1 #Her defasında 1'azalır.
+#2: Başlangıç ve bitiş değerlerini kullanıcıdan alıp aradaki tüm tek sayıları ekrana yazdıirın.
+#baslangic = int(input('Başlangıç: '))
+#bitis = int(input('Bitiş: '))
+#i = baslangic
+#while i < bitis:    #Bitişe kadar devam etsin.
+#  i += 1          #Her seferinde 1 artar.
+#  if i % 2 == 1:  #Tek sayıları yazdrımak için kullanılır.
+#      print(i)    #Başlangıç değerden bitiş değerine kadar tüm sayıları yazar.
 
 
-# 4: Kullanıcıdan alacağınız 5 sayıyı ekranda 'sıralı' bir şekilde yazdırın.
-# numbers = []
-# i = 0
-# while i < 5:
-#     sayi = int(input('Sayı: '))
-#     numbers.append(sayi)
-#     i += 1
-# numbers.sort() #Sayıları küçükten büyüğe doğru sıralar.
-# print(numbers) #Girilen sayıları :[10, 20, 30, 40, 50] şeklinde yazdırır.
+#3: 1-100 arasındaki sayıları azalan şekilde yazdırın.
+#i = 100 #Normlade 0 dan 100 yazdırmak için i=0 olurdu tam tersi yazılacak
+#while i > 0: 
+#  print(i)
+#  i -= 1 #Her defasında 1'azalır.
+
+
+#4: Kullanıcıdan alacağınız 5 sayıyı ekranda 'sıralı' bir şekilde yazdırın.
+#numbers = []
+#i = 0
+#while i < 5:
+#  sayi = int(input('Sayı: '))
+#  numbers.append(sayi)
+#  i += 1
+#numbers.sort() #Sayıları küçükten büyüğe doğru sıralar.
+#print(numbers) #Girilen sayıları :[10, 20, 30, 40, 50] şeklinde yazdırır.
 
 
 
-# 5: Kullanıcıdan alacağınız sınırsız ürün bilgisini urunler listesi içinde saklayın.
-#     ** ürün sayı1sını kullanıcıya sorun. 
-#     ** dictionary listesi yapısı (name, price) şeklinde olsun.
-#     ** ürün ekleme işlemi bittiğinde ürünleri ekranda while ile listeleyin.
+#5: Kullanıcıdan alacağınız sınırsız ürün bilgisini urunler listesi içinde saklayın.
+#  ** ürün sayı1sını kullanıcıya sorun. 
+#  ** dictionary listesi yapısı (name, price) şeklinde olsun.
+#  ** ürün ekleme işlemi bittiğinde ürünleri ekranda while ile listeleyin.
 urunler = []
 adet = int(input('Kaç ürün eklemek istiyorsunuz: '))
 
@@ -585,13 +585,13 @@ while(i < adet):
 for urun in urunler:
     print(f'Ürün adı: {urun["name"]} Ürün fiyatı: {urun["price"]}')
 
-# Kaç ürün eklemek istiyorsunuz: 2
-# Ürün ismi: Ekmek
-# Ürün fiyatı: 5
-# Ürün ismi: Su
-# Ürün fiyatı: 10
-# Ürün adı: Ekmek Ürün fiyatı: 5
-# Ürün adı: Su Ürün fiyatı: 10 
+#Kaç ürün eklemek istiyorsunuz: 2
+#Ürün ismi: Ekmek
+#Ürün fiyatı: 5
+#Ürün ismi: Su
+#Ürün fiyatı: 10
+#Ürün adı: Ekmek Ürün fiyatı: 5
+#Ürün adı: Su Ürün fiyatı: 10 
 
 **********************************************************************************
 
@@ -620,30 +620,30 @@ print(list(range(50,100,20))) #Liste şeklinde yazdırır.
 
 **********************************************************************************
 
-# index = 0
-# greeting = 'Hellothere'
+#index = 0
+#greeting = 'Hellothere'
 
-# for letter in greeting:
-#     print(f'index: {index} letter: {greeting[index]}') # Indexleri yazdırır.
-#     index += 1
-# print("\n")
-# for index,letter in enumerate(greeting):
-#     print(f'index: {index} letter: {letter}') # Indexleri yazdırır. Yukardaki örneğin benzeri.
-#     #index: 0 letter: H
-#     #index: 1 letter: e
-#     #index: 2 letter: l ... gibi yazdırır.
-# print("\n")
-# for item in enumerate(greeting):
-#     print(item)
-#     #(0, 'H')
-#     #(1, 'e')
-#     #(2, 'l') ... gibi yazdırır.
-# print("\n")
-# for index, item in enumerate(greeting):
-#     print(f'index: {index} letter: {item}')
+#for letter in greeting:
+#  print(f'index: {index} letter: {greeting[index]}') #Indexleri yazdırır.
+#  index += 1
+#print("\n")
+#for index,letter in enumerate(greeting):
+#  print(f'index: {index} letter: {letter}') #Indexleri yazdırır. Yukardaki örneğin benzeri.
+#  #index: 0 letter: H
+#  #index: 1 letter: e
+#  #index: 2 letter: l ... gibi yazdırır.
+#print("\n")
+#for item in enumerate(greeting):
+#  print(item)
+#  #(0, 'H')
+#  #(1, 'e')
+#  #(2, 'l') ... gibi yazdırır.
+#print("\n")
+#for index, item in enumerate(greeting):
+#  print(f'index: {index} letter: {item}')
 
 print("\n")
-# zip metodu
+#zip metodu
 list1 = [1,2,3,4,5]
 list2 = ['a','b','c','d','e']
 #Liste sayısı arttırılabilir. (Benzer şekilde)
@@ -651,16 +651,16 @@ print(list(zip(list1,list2))) #[(1, 'a'), (2, 'b'), (3, 'c'), (4, 'd'), (5, 'e')
 print("\n")
 for item in zip(list1, list2):
     print(item)
-    # (1, 'a')
-    # (2, 'b')... olarak çıktı verir.
+    #(1, 'a')
+    #(2, 'b')... olarak çıktı verir.
 
 print("\n")
 for a,b in zip(list1, list2):
     print(a,b)
-    # 1 a
-    # 2 b
-    # 3 c
-    # 4 d... olaak çıktı verir.
+    #1 a
+    #2 b
+    #3 c
+    #4 d... olaak çıktı verir.
 
 **********************************************************************************
 
@@ -707,14 +707,14 @@ for x in range(3):
     for y in range(3):
         result.append((x,y))
 print(result) 
-# [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (1, 2), (2, 0), (2, 1), (2, 2)]
+#[(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (1, 2), (2, 0), (2, 1), (2, 2)]
 
 print("\n")
 #Yukardaki kod ile aynı cevabı verir.
 numbers = [(x,y) for x in range(3) for y in range(3)]
 print(numbers)
-# [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (1, 2), (2, 0), (2, 1), (2, 2)]
-# x y yanında z olarak kullanılabilir çıktısı (x, y, z) şeklinde olur.
+#[(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (1, 2), (2, 0), (2, 1), (2, 2)]
+#x y yanında z olarak kullanılabilir çıktısı (x, y, z) şeklinde olur.
 
 **********************************************************************************
 '''
@@ -780,19 +780,19 @@ else:
 #metodlar
 list = [1,2,3]
 
-list.append(4) # [1,2,3,4]
+list.append(4) #[1,2,3,4]
 #append bir metottur ve listeye 4 ekler
 
-list.pop() # [1,2,3]
+list.pop() #[1,2,3]
 #pop da bir metottur ve listenin sonundaki eleman silinir.
 
-print(type(list)) # <class 'list'>
+print(type(list)) #<class 'list'>
 print(list) 
 
 myString= 'Hello'
 
-print(type(myString)) # <class 'list'>
-print(myString.upper()) # HELLO
+print(type(myString)) #<class 'list'>
+print(myString.upper()) #HELLO
 
 '''
 METOT-FONKSİYON FARKI
@@ -807,28 +807,28 @@ ulaşabiliriz.
 
 **********************************************************************************
 
-# def demek o parçanın fonkiyon olduğu anlamına gelir.
+#def demek o parçanın fonkiyon olduğu anlamına gelir.
 
-# def sayHello(name):
-#     print('Hello ' + name)
-# sayHello('Çınar') # Hello Çınar çıktısını verir.
+#def sayHello(name):
+#  print('Hello ' + name)
+#sayHello('Çınar') #Hello Çınar çıktısını verir.
 
 
 def sayHello(name = 'user'):
     return 'Hello ' + name
-msg = sayHello('Çınar') # Hello Çınar yazdırır.
+msg = sayHello('Çınar') #Hello Çınar yazdırır.
 print(msg)
 
 def total(num1, num2):
     return num1 + num2 
 result = total(10,20)
-print(result) # 30 çıktısını verir.
+print(result) #30 çıktısını verir.
 
 def yasHesapla(dogumyili):
     return 2019 - dogumyili
 agecinar = yasHesapla(2015)
 ageada   = yasHesapla(2010)
-print(agecinar, ageada) # 4 9 sonçlarını verir.
+print(agecinar, ageada) #4 9 sonçlarını verir.
 
 def emeklilignekadarkaldı(dogumyili, isim):
     '''
@@ -842,8 +842,8 @@ def emeklilignekadarkaldı(dogumyili, isim):
         print(f'Emekliliğinize {emeklilik} yıl kaldı ')
     else:
         print('zaten emekli oldunuz.')
-emeklilignekadarkaldı(1983, 'Ali') # Emekliliğinize 29 yıl kaldı
-emeklilignekadarkaldı(1950, 'Ali') # Zaten emekli oldunuz.
+emeklilignekadarkaldı(1983, 'Ali') #Emekliliğinize 29 yıl kaldı
+emeklilignekadarkaldı(1950, 'Ali') #Zaten emekli oldunuz.
 
 print(help(emeklilignekadarkaldı)) 
     #DOCSTRING: Doğum yılınıza göre emekliliğinize kaç yıl kaldı
@@ -861,7 +861,7 @@ def changename(n):
     n = 'ada'
 name = 'yigit'
 changename(name)
-print(name) # yigit
+print(name) #yigit
 
 def change1(n):
     n[0] = 'İstanbul' #ilk indise(0) 'İstanbul'u ata.
@@ -870,29 +870,29 @@ sehirler = ['Ankara', 'İzmir']
 n = sehirler[:] #slicing işlemi yapıldı.
 n[0] = 'İstanbul'
 
-print(sehirler) # ['Ankara', 'İzmir']
-print(n) # ['İstanbul', 'İzmir'] olarak yazar.
+print(sehirler) #['Ankara', 'İzmir']
+print(n) #['İstanbul', 'İzmir'] olarak yazar.
 
 ********************************
-def add(a, b, c = 0): # c=0 dememizin sebebi eğer c ye bir parametre atanmadıysa değeri 0 olsun.
+def add(a, b, c = 0): #c=0 dememizin sebebi eğer c ye bir parametre atanmadıysa değeri 0 olsun.
     return sum((a, b, c))
-print(add(10, 20)) # 30 çıktısını verir c=0 olarak alınmıştır
-print(add(10, 20, 30)) # c yerine 30 atıyor.
+print(add(10, 20)) #30 çıktısını verir c=0 olarak alınmıştır
+print(add(10, 20, 30)) #c yerine 30 atıyor.
 #Bunun yerine alternatif olarak:
 def add(*params):
-    print(params) # Gönderilen tüm sayılar bir liste olarak yazdırılır. (Tuple listesi olarak)
+    print(params) #Gönderilen tüm sayılar bir liste olarak yazdırılır. (Tuple listesi olarak)
     return(sum(params))
 print(add(10, 20))
-print(add(10,20,30,40,50,60)) # İstediğimiz kadar parametre atayabiliriz. (Çıktı: 210)
+print(add(10,20,30,40,50,60)) #İstediğimiz kadar parametre atayabiliriz. (Çıktı: 210)
 
 ***********
 
 def displayUser(**args): #2 yıldız dictionary(sözlük) olmasını sağlar. 
     for key, Value in args.items():
-        print(type(args)) # <class 'dict'> 
+        print(type(args)) #<class 'dict'> 
         print('{} is {}'.format(key,Value))
-            # name is Çınar
-            # age is 2 ... gibi yazdırır
+            #name is Çınar
+            #age is 2 ... gibi yazdırır
 displayUser(name = 'Çınar', age = 2, city = 'İstanbul')
 displayUser(name = 'Elif', age = 10, city = 'Sakarya', phone = '123456789')
 displayUser(name = 'Mehmet', age = 15, city = 'Amasya', phone = '987987989', email = 'mehmet@gmail.com')
@@ -911,14 +911,14 @@ myFunc(10,20,30,40,50, key1 = 'Value 1', key2 = 'Values 2')
 
 **********************************************************************************
 
-# 1- Gönderilen bir kelimeyi belirtilen kez ekranda gösteren fonksiyonu yazın.
+#1- Gönderilen bir kelimeyi belirtilen kez ekranda gösteren fonksiyonu yazın.
 def yazdir(kelime, adet):
     print(kelime * adet)
-yazdir('Merhaba \n', 3) # 3 defa merhaba yazdırır.
+yazdir('Merhaba \n', 3) #3 defa merhaba yazdırır.
 
 
-# 2- Kendine gönderilen sınırsız sayıdaki parametreyi bir listeye çeviren fonksiyonu yaz.
-def listeyeCevir(*args): # Sınırsız olması için * kullanımı önemlidir.
+#2- Kendine gönderilen sınırsız sayıdaki parametreyi bir listeye çeviren fonksiyonu yaz.
+def listeyeCevir(*args): #Sınırsız olması için * kullanımı önemlidir.
     liste = []
 
     for a in args:
@@ -929,24 +929,24 @@ result = listeyeCevir(10,20,30,7,8,9,6,6,3,2,6,3,4)
 print(result) #[10, 20, 30, 7, 8, 9, 6, 6, 3, 2, 6, 3, 4]
 
 
-# 3- Gönderilen 2 sayı arasındaki tüm asal sayıları bulun.
-# def asalSayilariBul(sayi1, sayi2):
-#     for sayi in range(sayi1, sayi2 + 1):
-#         if sayi > 1:
-#             for i in range(2, sayi):
-#                 if sayi % i == 0:
-#                     break #Eğer sayı asal değilse bırak.
-#                 else:
-#                     print(sayi) 
-#                     break
+#3- Gönderilen 2 sayı arasındaki tüm asal sayıları bulun.
+#def asalSayilariBul(sayi1, sayi2):
+#  for sayi in range(sayi1, sayi2 + 1):
+#      if sayi > 1:
+#          for i in range(2, sayi):
+#              if sayi % i == 0:
+#                  break #Eğer sayı asal değilse bırak.
+#              else:
+#                  print(sayi) 
+#                  break
 
-# sayi1 = int(input('1. sayı: '))
-# sayi2 = int(input('2. sayı: '))
+#sayi1 = int(input('1. sayı: '))
+#sayi2 = int(input('2. sayı: '))
 
-# asalSayilariBul(sayi1, sayi2)
+#asalSayilariBul(sayi1, sayi2)
 
 
-# 4- Kendisine gönderilen bir sayınıin tam bölenlerini bir liste şeklinde döndürür.
+#4- Kendisine gönderilen bir sayınıin tam bölenlerini bir liste şeklinde döndürür.
 def tambolen(sayimiz):
     tambol = []
     for i in range(2, sayimiz):
@@ -967,7 +967,7 @@ def square(num): return num ** 2
 numbers1 = [1, 3, 5, 7, 4, 6]
 
 result = list(map(square, numbers1))
-# map metodu bellektki adresi verir. Fakat list ile yazdırırsak bize numebrs listesini çağırır.
+#map metodu bellektki adresi verir. Fakat list ile yazdırırsak bize numebrs listesini çağırır.
 for item in map(square, numbers1):
     print(item)
 
@@ -982,7 +982,7 @@ numbers1 = [1, 3, 5, 7, 4, 6]
 
 def check_even(num): return num % 2 == 0
 result = list(filter(check_even, numbers1))
-print(result) # [4, 6] olarak yazar.
+print(result) #[4, 6] olarak yazar.
 
 #Veya
 
@@ -1002,23 +1002,23 @@ name = 'Ali'
 
 def changename(newname):
     name = newname
-    print(name) # Memo
+    print(name) #Memo
 
 changename('Memo')
-print(name) # Ali
+print(name) #Ali
 
 #############################
 
 name = 'Global String'
 def greeting():
-    # name = 'Ali' -- Yorum satırı kaldırılırsa hello Ali yazar.
+    #name = 'Ali' -- Yorum satırı kaldırılırsa hello Ali yazar.
 
     def hello():
         print('Hello' + name)
     
     hello()
 greeting()
-# hello Global String i yazdırır.
+#hello Global String i yazdırır.
 
 #############################
 
@@ -1045,9 +1045,9 @@ def test(x):
     print(f'Changed x to {x}')
 test(x)
 print(x)
-    # x: 50
-    # Changed x to 100
-    # 50
+    #x: 50
+    #Changed x to 100
+    #50
 
 **********************************************************************************
 
@@ -1114,7 +1114,7 @@ list2 = [1,2,3,4,5]
 result = type(list1)
 print(result) #<class 'list'>
 
-result = type(list2) # List1 bir için ne olduğunu class ifadesi ile verir.
+result = type(list2) #List1 bir için ne olduğunu class ifadesi ile verir.
 print(result) #<class 'list'>
 
 **********************************************************************************
@@ -1125,38 +1125,38 @@ from ctypes import addressof
 class  Person:
     pass #Boş olması durumunda hata verir. Fakat pass keywordu ile boş alan doldurulmuş olur.
 
-    # (class) attributes
+    #(class) attributes
     address = 'no information' #Her zaman kullanılmayacak özellikler class attributes adı altında belirtilir.
     #consturcator (yapıcı metot)
     def __init__(self, name, year): #self yerine başka bir parametre ismi konulabilir.
-        # Önemli olan self parametresinin görevini yerine getirmesidir.
-        # (object) attributes
+        #Önemli olan self parametresinin görevini yerine getirmesidir.
+        #(object) attributes
         self.name = name
         self.year = year
-        print('init metodu çalıştı.') # 2 defa init metodu çalıştı yazar.
+        print('init metodu çalıştı.') #2 defa init metodu çalıştı yazar.
         #methodlar
 
-# if a > 10:
-#     pass
-#     Böylece bir şey yazmamıza gerek kalmaz.
+#if a > 10:
+#  pass
+#  Böylece bir şey yazmamıza gerek kalmaz.
 
-# Object (instance)
+#Object (instance)
 p1 = Person(name = 'ali', year = 1990) #name : ali , year: 1990
 p2 = Person('ayse', 1992) #name : ayse , year: 1992
 
 #updating
-p1.name = 'ahmet' # ali  ismi ahmet olarak değişir.
-p1.address = 'kocaeli' # no information bilgisi kocaeli olarak yazdırılır.
+p1.name = 'ahmet' #ali  ismi ahmet olarak değişir.
+p1.address = 'kocaeli' #no information bilgisi kocaeli olarak yazdırılır.
 
 #accessing object attributes
 print(f'name: {p1.name} , year: {p1.year} , adres: {p1.address}.')
 print(f'name: {p2.name} , year: {p2.year} , adres: {p2.address}')
 
-print(p1) # <__main__.Person object at 0x0000021A5ED4AD10> yani bellekte p1 nesnesi için yer ayrıldı.
+print(p1) #<__main__.Person object at 0x0000021A5ED4AD10> yani bellekte p1 nesnesi için yer ayrıldı.
 print(p2) #p2 tanımldanığı andan itibaren bellekte yer tahsisi yapılır.
 
-print(type(p1)) # <class '__main__.Person'>
-print(type(p2)) # <class '__main__.Person'>
+print(type(p1)) #<class '__main__.Person'>
+print(type(p2)) #<class '__main__.Person'>
 
 print(p1 == p2) #False döndürür.
 
@@ -1170,32 +1170,32 @@ from ctypes import addressof
 class  Person:
     pass #Boş olması durumunda hata verir. Fakat pass keywordu ile boş alan doldurulmuş olur.
 
-    # (class) attributes
+    #(class) attributes
     address = 'no information' #Her zaman kullanılmayacak özellikler class attributes adı altında belirtilir.
     #consturcator (yapıcı metot)
     def __init__(self, name, year): #self yerine başka bir parametre ismi konulabilir.
-        # Önemli olan self parametresinin görevini yerine getirmesidir.
-        # (object) attributes
+        #Önemli olan self parametresinin görevini yerine getirmesidir.
+        #(object) attributes
         self.name = name
         self.year = year
 
-    # instance methods
+    #instance methods
     def intro(self):
-        print('Hello there. I am ' + self.name) # Hello there. I am ali
+        print('Hello there. I am ' + self.name) #Hello there. I am ali
   
-    # instance methods
+    #instance methods
     def calculateAge(self):
         return 2019 - self.year
 
-# Object (instance)
+#Object (instance)
 p1 = Person(name = 'ali', year = 1990) #name : ali , year: 1990
 p2 = Person('ayse', year = 1992) #name : ayse , year: 1992
 
-p1.intro() # Hello there. I am ali
-p2.intro() # Hello there. I am ayse
+p1.intro() #Hello there. I am ali
+p2.intro() #Hello there. I am ayse
 
-print(f'Adım: {p1.name} ve Yaşım: {p1.calculateAge()}') # Adım: ali ve Yaşım: 29 
-print(f'Adım: {p2.name} ve Yaşım: {p2.calculateAge()}') # Adım: ayse ve Yaşım: 27
+print(f'Adım: {p1.name} ve Yaşım: {p1.calculateAge()}') #Adım: ali ve Yaşım: 29 
+print(f'Adım: {p2.name} ve Yaşım: {p2.calculateAge()}') #Adım: ayse ve Yaşım: 27
 
 **********************************************************************************
 
@@ -1219,21 +1219,21 @@ class Circle:
 c1 = Circle() #Yaiçap belirtilmezse oto 1 alınır.
 c2 = Circle(5)
 
-print(f'c1 : alan = {c1.alanHesapla()} çevre = {c1.cevreHesapla()}') # c1 : alan = 3.14 çevre = 6.28
-print(f'c2 : alan = {c2.alanHesapla()} çevre = {c2.cevreHesapla()}') # c2 : alan = 78.5 çevre = 31.400000000000002
+print(f'c1 : alan = {c1.alanHesapla()} çevre = {c1.cevreHesapla()}') #c1 : alan = 3.14 çevre = 6.28
+print(f'c2 : alan = {c2.alanHesapla()} çevre = {c2.cevreHesapla()}') #c2 : alan = 78.5 çevre = 31.400000000000002
 
 **********************************************************************************
 
 
-# Inheritance (Kalıtım): Miras  ALma
+#Inheritance (Kalıtım): Miras  ALma
  
-# Person => name, lastname, age, eat(), run(), drink()
-# Student, Teacher da olmasını isteriz
-# Bu yzüden Studen(Person), Teacher(Person) ile Person Sınıfını miras alırız.
+#Person => name, lastname, age, eat(), run(), drink()
+#Student, Teacher da olmasını isteriz
+#Bu yzüden Studen(Person), Teacher(Person) ile Person Sınıfını miras alırız.
 
 #Ya da 
 
-# Animal => Dog(Animal), Cat(Animal) gibi ...
+#Animal => Dog(Animal), Cat(Animal) gibi ...
 
 class Person():
     def __init__(self, fname, lname):
@@ -1254,8 +1254,8 @@ class Student(Person):
         print('Student created')
 
     #override
-    def who_am_i(self): # Yukarıda ki fonksiyonu ezmek (override etmek) için kullanıldı
-        print('I am a Student :)') # Override edilen fonka yazılan yeni Metin
+    def who_am_i(self): #Yukarıda ki fonksiyonu ezmek (override etmek) için kullanıldı
+        print('I am a Student :)') #Override edilen fonka yazılan yeni Metin
 
     def sayhello(self):
         print('Helllo I am a STUDENT')
@@ -1271,21 +1271,21 @@ class Teacher(Person):
 
 t1 = Teacher('Serkan','Arı','SOFTWARE')
 p1 = Person('Mehmet', 'Ata')
-s1 = Student('Ali', 'Bşaran','12356') # number sadece Student'a özel olduğu için sadece burda yazılabilir
+s1 = Student('Ali', 'Bşaran','12356') #number sadece Student'a özel olduğu için sadece burda yazılabilir
 #Person created
 #Student created - Miras  alıyor
 
-print(p1.firstname + ' ' + p1.lastname) # Mehmet Ata
-print(s1.firstname + ' ' + s1.lastname + ' ' + s1.studentnumber) #  Ali Bşaran 12356
+print(p1.firstname + ' ' + p1.lastname) #Mehmet Ata
+print(s1.firstname + ' ' + s1.lastname + ' ' + s1.studentnumber) #Ali Bşaran 12356
 
-t1.who_am_i() # I am a SOFTWARE TEACHER
-p1.who_am_i() # I am a Person
-s1.who_am_i() # I am a Person
+t1.who_am_i() #I am a SOFTWARE TEACHER
+p1.who_am_i() #I am a Person
+s1.who_am_i() #I am a Person
 
-p1.eat() # I am eating
-s1.eat() # I am eating
+p1.eat() #I am eating
+s1.eat() #I am eating
 
-s1.sayhello() # Hello I am a STUDENT "Sadece Student'a ait bir yapıdır"
+s1.sayhello() #Hello I am a STUDENT "Sadece Student'a ait bir yapıdır"
 
 
 
@@ -1315,20 +1315,20 @@ class movie():
 
 m = movie('Film adı', 'Yönetmen', 120)
 
-# print(mylist) # [1, 2, 3]
-# print(m)
+#print(mylist) #[1, 2, 3]
+#print(m)
 
-#print(m.duration) # 120 == print(len(m))
+#print(m.duration) #120 == print(len(m))
 
-del m # m objesini siler
+del m #m objesini siler
 
-print(m) # Film silindi
+print(m) #Film silindi
 
 
 **********************************************************************************
 
 
-# Question class
+#Question class
 class question:
     def __init__(self,text,choices,answer) -> None:
         self.text = text
@@ -1339,11 +1339,11 @@ class question:
         return self.answer == answer
 
 
-# print(q1.checkanswer('Python')) - True
-# print(q2.checkanswer('C#')) - False
+#print(q1.checkanswer('Python')) - True
+#print(q2.checkanswer('C#')) - False
 
 
-# Quiz  class
+#Quiz  class
 class quiz:
     def __init__(self, questions) -> None:
         self.questions = questions
@@ -1385,7 +1385,7 @@ class quiz:
         print('Score: ',self.score)
 
 
-# Soru - seçenekler - cevap
+#Soru - seçenekler - cevap
 q1 = question('En iyi programlama dili hangisidir ?',['C#','javascript','java','Python'],'Python')
 q2 = question('En iyi popüler dili hangisidir ?',['C#','Python','javascript','java'],'Python')
 q3 = question('En çok kazandıran programlama dili hangisidir ?',['Python','javascript','C#','java'],'Python')
