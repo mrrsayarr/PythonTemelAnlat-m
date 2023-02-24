@@ -22,25 +22,21 @@ Python'da kullanılan temel veri tipleri şunlardır:
 ```
 x = 5
 y = -10
-
 ```
 ##### Float (Ondalık Sayı)
 ```
 pi = 3.14
 x = 2.5
-
 ```
 ##### String (Metin)
 ```
 name = "Ali"
 surname = 'Yılmaz'
-
 ```
 ##### Boolean (Mantıksal)
 ```
 is_sunny = True
 is_raining = False
-
 ```
 
 ## Koşullar ve Döngüler
@@ -57,13 +53,11 @@ if x > 0:
     print("x pozitif")
 else:
     print("x negatif veya sıfır")
-
 ```
 ##### For Döngüsü
 ```
 for i in range(5):
     print(i)
-
 ```
 ##### While Döngüsü
 ```
@@ -72,7 +66,6 @@ i = 0
 while i < 5:
     print(i)
     i += 1
-
 ```
 
 
@@ -84,7 +77,6 @@ def greet(name):
     print("Merhaba, " + name)
 
 greet("Ahmet")
-
 ```
 
 
@@ -103,7 +95,6 @@ class Person:
 
 p1 = Person("Ali", 25)
 p1.greet()
-
 ```
 ### Çift / Tek Sayı Kontrolü
 ```
