@@ -1,3 +1,334 @@
+
+## Python Programlama Dili
+
+- Python, genel amaçlı, yüksek seviyeli bir programlama dilidir. Python, okunması ve yazması kolay olan basit sözdizimi ile öne çıkar. Python açık kaynak kodludur ve tüm platformlarda (Windows, Linux, MacOS vb.) kullanılabilir.
+
+## Değişkenler ve Veri Tipleri
+
+Python'da herhangi bir değeri saklamak için değişkenler kullanılır. Değişkenlerin isimlendirilmesi için bazı kurallar vardır:
+
+- Değişken ismi sayı ile başlayamaz.
+- Değişken isimleri harf, sayı ve alt çizgi (_) içerebilir.
+- Değişken isimleri büyük/küçük harf duyarlıdır.
+
+Python'da kullanılan temel veri tipleri şunlardır:
+
+- **Integer (Tam Sayı):** Tamsayılar, pozitif veya negatif tam sayılardır.
+- **Float (Ondalık Sayı):** Ondalık sayılar, noktadan sonra rakamlar içeren sayılardır.
+- **String (Metin):** Metinler, tek tırnak ('') veya çift tırnak ("") içinde yazılan karakter dizileridir.
+- **Boolean (Mantıksal):** Mantıksal veri tipi, sadece True (Doğru) veya False (Yanlış) değerlerini alabilir.
+##### Integer (Tam Sayı)
+
+```
+x = 5
+y = -10
+
+```
+##### Float (Ondalık Sayı)
+```
+pi = 3.14
+x = 2.5
+
+```
+##### String (Metin)
+```
+name = "Ali"
+surname = 'Yılmaz'
+
+```
+##### Boolean (Mantıksal)
+```
+is_sunny = True
+is_raining = False
+
+```
+
+## Koşullar ve Döngüler
+Python'da koşullar ve döngüler, programların belirli şartlara göre çalışmasını sağlar.
+
+- **If-Else Koşulu:** Belirli bir şart sağlandığında, programda belirli bir işlem yapılmasını sağlar. If-else koşulu, programlama dilinde temel yapı taşlarından biridir.
+- **For Döngüsü:** Belirli bir sayıda tekrar etmek istediğimiz işlemleri gerçekleştirmek için kullanılır.
+- **While Döngüsü:** Belirli bir şart sağlandığı sürece tekrar etmek istediğimiz işlemleri gerçekleştirmek için kullanılır.
+##### If-Else Koşulu
+```
+x = 5
+
+if x > 0:
+    print("x pozitif")
+else:
+    print("x negatif veya sıfır")
+
+```
+##### For Döngüsü
+```
+for i in range(5):
+    print(i)
+
+```
+##### While Döngüsü
+```
+i = 0
+
+while i < 5:
+    print(i)
+    i += 1
+
+```
+
+
+## Fonksiyonlar
+Fonksiyonlar, bir veya daha fazla işlemi gerçekleştirmek için kullanılan kod bloklarıdır. Fonksiyonlar, programlama dilinde modüler tasarımı sağlar ve kodun tekrar kullanılabilirliğini arttırır.
+##### While Döngüsü
+```
+def greet(name):
+    print("Merhaba, " + name)
+
+greet("Ahmet")
+
+```
+
+
+## Nesne Tabanlı Programlama
+Python, nesne tabanlı programlama (OOP) kavramlarını da destekler. OOP, programların daha kolay anlaşılır, yönetilebilir ve genişletilebilir hale getirilmesini sağlar.
+
+##### OOP
+```
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def greet(self):
+        print("Merhaba, ben " + self.name)
+
+p1 = Person("Ali", 25)
+p1.greet()
+
+```
+### Çift / Tek Sayı Kontrolü
+```
+x = 7
+
+if x % 2 == 0:
+    print("Çift sayı")
+else:
+    print("Tek sayı")
+
+print(x + y)
+```
+### Faktöriyel Hesaplama
+```
+n = 5
+faktoriyel = 1
+
+for i in range(1, n+1):
+    faktoriyel *= i
+
+print(faktoriyel)
+```
+### Asal Sayı Kontrolü
+```
+x = 7
+asalMi = True
+
+for i in range(2, x):
+    if x % i == 0:
+        asalMi = False
+        break
+
+if asalMi:
+    print("Asal sayı")
+else:
+    print("Asal sayı değil")
+```
+### Liste Elemanları Toplamı
+```
+liste = [1, 2, 3, 4, 5]
+
+toplam = 0
+for eleman in liste:
+    toplam += eleman
+
+print(toplam)
+```
+### Kelime Ters Çevirme
+```
+kelime = "Python"
+
+ters_kelime = ""
+for harf in kelime:
+    ters_kelime = harf + ters_kelime
+
+print(ters_kelime)
+```
+### Sayı Tahmin Oyunu
+```
+import random
+
+sayi = random.randint(1, 100)
+
+while True:
+    tahmin = int(input("Tahmininizi girin: "))
+
+    if tahmin < sayi:
+        print("Daha yüksek bir sayı söyleyin.")
+    elif tahmin > sayi:
+        print("Daha düşük bir sayı söyleyin.")
+    else:
+        print("Tebrikler! Sayıyı doğru tahmin ettiniz.")
+        break
+```
+### Tekrar Eden Elemanları Bulma
+```
+liste = [1, 2, 3, 3, 4, 5, 5]
+
+tekrarlar = []
+for eleman in liste:
+    if liste.count(eleman) > 1 and eleman not in tekrarlar:
+        tekrarlar.append(eleman)
+
+print(tekrarlar)
+```
+### Fibonacci Serisi
+```
+n = 10
+fibonacci = [0, 1]
+
+for i in range(2, n):
+    sayi = fibonacci[i-1] + fibonacci[i-2]
+    fibonacci.append(sayi)
+
+print(fibonacci)
+```
+
+# Nesne Tabanlı Programlama 
+Python'da nesne tabanlı programlama kavramlarını kullanarak, daha anlaşılır, yönetilebilir ve genişletilebilir kodlar yazabiliriz. Bu bölümde, Python'da nesne tabanlı programlama kavramlarını örnek kod bloklarıyla açıklayacağız.
+
+### Sınıflar ve Nesneler
+Sınıflar, Python'da nesne tabanlı programlamanın temel yapı taşlarından biridir. Sınıflar, bir nesnenin özelliklerini (attributes) ve yöntemlerini (methods) tanımlayan bir çeşit şablon olarak düşünülebilir.
+```
+# Sınıf tanımı
+class Araba:
+    def __init__(self, marka, model, yil):
+        self.marka = marka
+        self.model = model
+        self.yil = yil
+
+    def bilgileri_goster(self):
+        print("Marka:", self.marka)
+        print("Model:", self.model)
+        print("Yıl:", self.yil)
+
+# Nesne oluşturma
+araba1 = Araba("Renault", "Clio", 2015)
+
+# Nesne yöntemlerine erişim
+araba1.bilgileri_goster()
+```
+Yukarıdaki örnekte, Araba adında bir sınıf tanımladık. Sınıfın özellikleri marka, model ve yıl olarak tanımlandı. **init**() fonksiyonu, sınıftan nesne oluşturulduğunda özelliklerin nasıl tanımlanacağını belirler.
+
+Ayrıca, sınıfın metodlarından biri olan bilgileri_goster() fonksiyonu, oluşturulan nesnenin özelliklerini ekrana yazdırır.
+
+### Kalıtım
+Kalıtım, nesne tabanlı programlamada bir sınıftan yeni bir sınıf oluşturma yöntemidir. Kalıtım sayesinde, bir sınıfın özelliklerini ve yöntemlerini başka bir sınıfın da kullanmasını sağlayabiliriz.
+```
+# Sınıf tanımı
+class Hayvan:
+    def __init__(self, isim, tur):
+        self.isim = isim
+        self.tur = tur
+
+    def bilgileri_goster(self):
+        print("İsim:", self.isim)
+        print("Tür:", self.tur)
+
+# Kalıtım alınan sınıf
+class Kedi(Hayvan):
+    def miyavla(self):
+        print("Miyav!")
+
+# Nesne oluşturma
+kedi1 = Kedi("Tekir", "Siyam")
+
+# Kalıtım alınan sınıfın yöntemlerine erişim
+kedi1.bilgileri_goster()
+
+# Kendi yöntemlerine erişim
+kedi1.miyavla()
+```
+Yukarıdaki örnekte, Hayvan adında bir sınıf tanımladık. Bu sınıfın özellikleri isim ve tür olarak tanımlandı. **init**() fonksiyonu, sınıftan nesne oluşturulduğunda özelliklerin nasıl tanımlanacağını belirler.
+
+Kedi adında bir sınıf oluşturduk ve bu sınıf, Hayvan sınıfından kalıtım aldı. Kedi sınıfı, Hayvan sınıfının özelliklerini ve yöntemlerini kullanabilir. Ayrıca, Kedi sınıfına, miyavla() adında bir yöntem ekledik.
+
+### Polimorfizm
+Polimorfizm, nesne tabanlı programlamada aynı adı taşıyan ancak farklı işlevleri olan yöntemlerin kullanımıdır. Polimorfizm, bir sınıfın farklı durumlarda farklı işlevler görebilmesini sağlar.
+```
+# Sınıf tanımı
+class Sekil:
+    def alan_hesapla(self):
+        pass
+
+# Alt sınıflar
+class Dikdortgen(Sekil):
+    def __init__(self, genislik, yukseklik):
+        self.genislik = genislik
+        self.yukseklik = yukseklik
+
+    def alan_hesapla(self):
+        return self.genislik * self.yukseklik
+
+class Ucgen(Sekil):
+    def __init__(self, taban, yukseklik):
+        self.taban = taban
+        self.yukseklik = yukseklik
+
+    def alan_hesapla(self):
+        return (self.taban * self.yukseklik) / 2
+
+# Nesne oluşturma
+sekil1 = Dikdortgen(5, 10)
+sekil2 = Ucgen(8, 6)
+
+# Polimorfizm
+sekil_listesi = [sekil1, sekil2]
+
+for sekil in sekil_listesi:
+    print(sekil.alan_hesapla())
+```
+Yukarıdaki örnekte, Sekil adında bir sınıf tanımladık. Bu sınıf, alan_hesapla() adında bir yöntem içeriyor. Ancak bu yöntem, henüz tanımlanmadı.
+
+Dikdortgen ve Ucgen adında iki alt sınıf oluşturduk. Her iki alt sınıf da Sekil sınıfından kalıtım aldı ve alan_hesapla() yöntemini farklı şekillerde tanımladı.
+
+Nesne oluşturduktan sonra, Dikdortgen ve Ucgen nesnelerini sekil_listesi adında bir liste içinde topladık. Ardından, bu liste üzerinde bir döngü oluşturarak, her nesnenin alanını hesaplayıp ekrana yazdırdık. Bu işlem sırasında, polimorfizm özelliğinden yararlandık.
+
+Yukarıdaki örnekler, Python'da nesne tabanlı programlama kavramlarını örnek kod bloklarıyla açıklamaktadır. Nesne tabanlı programlama, kodların daha anlaşılır, yönetilebilir ve genişletilebilir hale getirilmesini sağlar.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #Python Temel Konu
 Bu Repo konu anlatmaya yönelik bir Repo'dur. 
 Sadık Turan sayesinde öğrendiğim ve faydalı gördüğüm Python dosyalarını, alakalı linkleri buraya atmaya çalışacağım.
