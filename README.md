@@ -579,6 +579,7 @@ else:
 **********************************************************************************
 
 #2- Bir öğrencinin 2 yazılı bir sözlü notunu alıp hesaplanan ortalamaya göre
+```
 #  not aralığına karşılık gelen not bilgisini yazdırınız.
 #  0 - 24 => 0
 #  25-44 => 1
@@ -587,7 +588,6 @@ else:
 #  70-84 => 4
 #  3 85-100 => 5
 
-```
 yazili1 = int(input('1.Yazılı: '))
 yazili2 = int(input('2.Yazılı: '))
 sozlu = int(input('Sözlü: '))
@@ -613,14 +613,15 @@ elif ortalama >= 85 and ortalama <=100:
     print(f'Ortalamanız : {ortalama} notunuz: 5')
 else:
     print('Yanlış bilgi girdiniz.')
-
 ```
+
 
 
 **********************************************************************************
 
-#3- Trafiğe çıkış tarihi alınan bir aracın servis zamanını aşağıdaki bilgilere
-# göre hesaplayinız.
+#3- Trafiğe çıkış tarihi alınan bir aracın servis zamanını aşağıdaki bilgilere göre hesaplayinız.
+
+```
 # 1. Bakım => 1. yıl
 # 2. Bakım => 2. yıl
 # 3. Bakım => 3. yıl
@@ -648,12 +649,14 @@ elif days > 365*2 and days <= 365*3:
     print('3.Servis Aralığı')
 else: 
     print('Hatalı süre') #Eğer girilen süre üzerinden 365*3 gün geçerse bunu yazar.
+```
+
 
 **********************************************************************************
 '''
 1- Girilen bir sayının 0-100 arasında olup olmadığını kontrol ediniz.
     
-'''
+```
 sayi = float(input('sayı: '))
 result = (sayi > 0) and (sayi<=100)
 
@@ -661,6 +664,8 @@ if result:
     print(f'Sayı 0-100 arasındadır.')
 else:
     print('Sayı 0-100 arasında değildir.')
+```
+
 
 
 
@@ -668,7 +673,7 @@ else:
 '''
 2- Girilen bir sayının pozitif çift sayı olup olmadığını kontrol ediniz.
 
-'''
+```
 sayi = int(input('sayı: '))
 result = (sayi > 0) and (sayi % 2 ==0)
 
@@ -683,12 +688,14 @@ elif sayi < 0 and sayi % 2 ==0:
 
 else: 
     print('Sayı çift değildir.')
+```
+
 
 **********************************************************************************
 '''
 3- Email ve parola bilgileri ile giriş kontrolü yapınız.
 
-'''
+```
 email = 'email@gmail.com'
 password = 'abc123'
 
@@ -704,12 +711,14 @@ if (girilenemail == email):
         print('Yanlış Parola girdiniz.')
 else:
     print(f'Email bilgisi yanlış')
+```
+
 
 **********************************************************************************
 '''
 4- Girilen 3 sayıyı büyüklük olarak karşılaştırınız.
 
-'''
+```
 a = int(input('a: '))
 b = int(input('b: '))
 c = int(input('c: '))
@@ -725,17 +734,20 @@ elif (c > a) and (c > b):
 
 else:
     print('Yanlış değer girdiniz.')
+```
+
 
 **********************************************************************************
 
 '''
 5- Kullanıcıdan 2 vize (%60) ve final (%40) notunu alıp ortalama hesaplayınız.
-   Eğer ortalama 50 ve üstündeyse geçti değilse kaldı yazdırın.
-   a-) Ortamalama 50 olsa bile final notu en az 50 olmalıdır.
-   b-) Finalden 70 alındığında ortalamanın önemi olmasın.
+   
 
+```
+#Eğer ortalama 50 ve üstündeyse geçti değilse kaldı yazdırın.
+#a-) Ortamalama 50 olsa bile final notu en az 50 olmalıdır.
+#b-) Finalden 70 alındığında ortalamanın önemi olmasın.
 
-'''
 vize1 = float(input('vize 1: '))
 vize2 = float(input('vize 2: '))
 final = float(input('final : ')) 
@@ -752,8 +764,10 @@ if ortalama >= 50:
         print(f'Öğrencinin ortalaması: {ortalama} ve geçme durumu: başarısız.')
 else:
         print(f'Öğrencinin ortalaması: {ortalama} ve geçme durumu: başarısız.')
+```
 
 **********************************************************************************
+```
 numbers = [1,2,3,4,5]
 
 #Eğer for döngüsü olmasaydı bunların hepsini elle yazmak zorunda kalacaktık.
@@ -799,9 +813,11 @@ for key,value in d.items():
     #k1 1
     #k2 2
     #k3 3 
+```
+
 
 **********************************************************************************
-
+```
 sayilar = [1,3,5,7,9,12,19,21] 
 
 #1- Sayilar listesindeki hangi sayılar 3'ün katıdır ?
@@ -822,10 +838,13 @@ for sayi2 in sayilar:
     if (sayi2 % 2 == 1): #Tek olduğunu anlmak için 2 bölümğnden kalan 1 olmalıdır.
         print(sayi2 ** 2) #1 9  25 49 81 361 441 çıktısını verir
 
+```
+
+
 **********************************************************************************
 
 #4- Şehirlerden hangileri en fazla 5 karakterlidir ?
-
+```
 from unicodedata import name
 
 
@@ -858,9 +877,10 @@ for urunfiyat in urunler:
         #samsung S6
         #samsung S7
         #samsung S8
+```
 
 **********************************************************************************
-
+```
 #0-100 e kadar yazdırma
 
 #x = 0
@@ -882,7 +902,10 @@ while not name.strip(): #Eğer isim girilmezse döngüye girer ve yazılana kada
     name = input('İsminizi Girin: ')
 
 print(f'Merhaba, {name}')
+```
+
 **********************************************************************************
+```
 sayilar = [1,3,5,7,9,12,19,21]
 
 #1: sayilar listesini while ile ekrana yazdırın.
@@ -947,10 +970,13 @@ for urun in urunler:
 #Ürün fiyatı: 10
 #Ürün adı: Ekmek Ürün fiyatı: 5
 #Ürün adı: Su Ürün fiyatı: 10 
+```
+
 
 **********************************************************************************
 
 #1 den 100 e kadar tek sayıların toplamı
+```
 from unittest import result
 
 result = 0
@@ -961,8 +987,11 @@ while x <= 100:
         continue
     result += x
 print(f'Toplam: {result}') #Toplam: 2550 sonucunu verir.
+```
+
 
 **********************************************************************************
+```
 for item in range(5,10): #5'ten başla 10 a kadar yazdır. 
     #Artış miktarı için bir virgül daha atıp istediğiniz sayıyı yazabilirsiniz.
     print(item)
@@ -971,10 +1000,10 @@ for item in range(50,100,20):
     print(item)
 
 print(list(range(50,100,20))) #Liste şeklinde yazdırır. 
- 
+```
 
 **********************************************************************************
-
+```
 #index = 0
 #greeting = 'Hellothere'
 
@@ -1017,8 +1046,11 @@ for a,b in zip(list1, list2):
     #3 c
     #4 d... olaak çıktı verir.
 
-**********************************************************************************
+```
 
+
+**********************************************************************************
+```
 numbers = []
 for x in range(10):
     numbers.append(x)
@@ -1070,6 +1102,9 @@ numbers = [(x,y) for x in range(3) for y in range(3)]
 print(numbers)
 #[(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (1, 2), (2, 0), (2, 1), (2, 2)]
 #x y yanında z olarak kullanılabilir çıktısı (x, y, z) şeklinde olur.
+
+```
+
 
 **********************************************************************************
 '''
