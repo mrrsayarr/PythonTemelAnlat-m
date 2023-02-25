@@ -1115,7 +1115,7 @@ print(numbers)
     ** Hak bilgisini kullanicıdan alın ve her soru belirtilen can sayısı
        üzerinden hesaplansın.
 '''
- 
+ ```
 import random
 
 sayi = random.randint(1,10) #1 den  10 a kadar sayıları yazdırır.
@@ -1139,7 +1139,7 @@ while hak > 0:
 
     if hak == 0:
         print(f'Hakkınız bitti. Tutulan sayı: {sayi}')
-
+```
 
 **********************************************************************************
 '''
@@ -1147,7 +1147,7 @@ Soru: Girilen sayının asal olup olmadığını bulunuz.
 *** Asal sayı kendisi ve 1 dışında böleni olmayan sayılardır.
 2, 3, 5, 7....
 '''
-
+```
 sayi = int(input('Sayı girin: '))
 asalmi = True
 
@@ -1164,9 +1164,11 @@ if asalmi:
     print('Sayı asaldır.')
 else:
     print("Sayı asal değildir.")
+```
+
 
 **********************************************************************************
-
+```
 #metodlar
 list = [1,2,3]
 
@@ -1193,10 +1195,12 @@ kullanıcı tarafından tanımlanabileceği gibi Python'da
 hazır olarak da tanımlanmıştır. Metotlar ise sadece sınıf 
 içinde tanımlanımlanırken örneklem üzerinden metotlara 
 ulaşabiliriz.
-'''
+
+```
+
 
 **********************************************************************************
-
+```
 #def demek o parçanın fonkiyon olduğu anlamına gelir.
 
 #def sayHello(name):
@@ -1243,7 +1247,9 @@ print(help(emeklilignekadarkaldı))
 list = [1,2,3]
 print(help(list.append)) #Ekleme yapılabileceğini söylüyor.
 
+```
 **********************************************************************************
+```
 from multiprocessing.sharedctypes import Value
 
 
@@ -1263,7 +1269,11 @@ n[0] = 'İstanbul'
 print(sehirler) #['Ankara', 'İzmir']
 print(n) #['İstanbul', 'İzmir'] olarak yazar.
 
+```
+
 ********************************
+
+```
 def add(a, b, c = 0): #c=0 dememizin sebebi eğer c ye bir parametre atanmadıysa değeri 0 olsun.
     return sum((a, b, c))
 print(add(10, 20)) #30 çıktısını verir c=0 olarak alınmıştır
@@ -1275,8 +1285,11 @@ def add(*params):
 print(add(10, 20))
 print(add(10,20,30,40,50,60)) #İstediğimiz kadar parametre atayabiliriz. (Çıktı: 210)
 
-***********
+```
 
+
+***********
+```
 def displayUser(**args): #2 yıldız dictionary(sözlük) olmasını sağlar. 
     for key, Value in args.items():
         print(type(args)) #<class 'dict'> 
@@ -1298,9 +1311,11 @@ myFunc(10,20,30,40,50, key1 = 'Value 1', key2 = 'Values 2')
         #20
         #(30, 40, 50)
         #{'key1': 'Value 1', 'key2': 'Values 2'}
+```
+
 
 **********************************************************************************
-
+```
 #1- Gönderilen bir kelimeyi belirtilen kez ekranda gösteren fonksiyonu yazın.
 def yazdir(kelime, adet):
     print(kelime * adet)
@@ -1345,8 +1360,11 @@ def tambolen(sayimiz):
     return tambol
 print(tambolen(20)) #[2, 4, 5, 10]
 
-**********************************************************************************
+```
 
+
+**********************************************************************************
+```
 #Map-Filter
 
 import numbers
@@ -1367,7 +1385,11 @@ numbers2 = [2, 4, 6, 8]
 result = list(map(lambda num: num ** 2, numbers2))
 print(result) #[4, 16, 36, 64] olarak çıktı verecektir.
 
+```
+
+
 ******************************
+```
 numbers1 = [1, 3, 5, 7, 4, 6]
 
 def check_even(num): return num % 2 == 0
@@ -1386,8 +1408,11 @@ result = check_even(numbers[2])#Sayı tek olduğu için False bilgisini döner.
 print(result)
 
 
-**********************************************************************************
+```
 
+
+**********************************************************************************
+```
 name = 'Ali'
 
 def changename(newname):
@@ -1439,9 +1464,12 @@ print(x)
     #Changed x to 100
     #50
 
+```
+
+
 **********************************************************************************
 
-
+```
 AliHesap = {
     'ad': 'Ali Pala',
     'hesapNo': '11111111',
@@ -1491,9 +1519,12 @@ print(' *****************')
 paraCek(AliHesap, 2000)
 
 
+```
+
+
 **********************************************************************************
 
-
+```
 #object Orianted Programming (OOP)
 #Class
 #instance --> Object
@@ -1507,8 +1538,11 @@ print(result) #<class 'list'>
 result = type(list2) #List1 bir için ne olduğunu class ifadesi ile verir.
 print(result) #<class 'list'>
 
-**********************************************************************************
+```
 
+
+**********************************************************************************
+```
 #Classlar
 
 from ctypes import addressof
@@ -1550,10 +1584,13 @@ print(type(p2)) #<class '__main__.Person'>
 
 print(p1 == p2) #False döndürür.
 
+
+```
+
 **********************************************************************************
 
 
-
+```
 #Classlar
 
 from ctypes import addressof
@@ -1587,10 +1624,13 @@ p2.intro() #Hello there. I am ayse
 print(f'Adım: {p1.name} ve Yaşım: {p1.calculateAge()}') #Adım: ali ve Yaşım: 29 
 print(f'Adım: {p2.name} ve Yaşım: {p2.calculateAge()}') #Adım: ayse ve Yaşım: 27
 
+```
+
+
 **********************************************************************************
 
 
-
+```
 class Circle:
     #class object attribute
     pi = 3.14
@@ -1612,8 +1652,12 @@ c2 = Circle(5)
 print(f'c1 : alan = {c1.alanHesapla()} çevre = {c1.cevreHesapla()}') #c1 : alan = 3.14 çevre = 6.28
 print(f'c2 : alan = {c2.alanHesapla()} çevre = {c2.cevreHesapla()}') #c2 : alan = 78.5 çevre = 31.400000000000002
 
+
+```
+
 **********************************************************************************
 
+```
 
 #Inheritance (Kalıtım): Miras  ALma
  
@@ -1679,8 +1723,11 @@ s1.sayhello() #Hello I am a STUDENT "Sadece Student'a ait bir yapıdır"
 
 
 
+```
+
 **********************************************************************************
 
+```
 mylist = [1,2,3]
 mystring = 'my string'
 
@@ -1713,11 +1760,11 @@ m = movie('Film adı', 'Yönetmen', 120)
 del m #m objesini siler
 
 print(m) #Film silindi
-
+```
 
 **********************************************************************************
 
-
+```
 #Question class
 class question:
     def __init__(self,text,choices,answer) -> None:
@@ -1785,5 +1832,4 @@ quiz = quiz(questions)
 
 quiz.displayquestion()
 
-
-**********************************************************************************
+```
