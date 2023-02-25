@@ -360,11 +360,13 @@ print(f'Sayı 0-100 arasında mı: {result}') #14 için==> Sayı 0-100 arasında
 
 2- Girilen bir sayınıin pozitif sayı olup olmadığını kontrol ediniz.
 ```
-
-```
 sayi = int(input('sayı: '))
+
 result = sayi > 0 and sayi % 2 == 0
+
 print(f'Girilen sayı çift sayı mı: {result}')
+```
+
 
 3- Email ve parola bilgileri ile giriş kontrolü yapınız.
 ```
@@ -396,27 +398,34 @@ result = c>a and c>b
 #En büyük sayı True değeri döner geri kalanı ise False değeri döner.
 ```
 
-**********************************************************************************
+
 5- Kullanıcıdan 2 vize (%60) ve final (%40) notunu alıp ortalama hesaplayın
 ```
 #Eğer ortalama 50 ve üstündeyse geçti değilse kaldı yazdırın
 a-) Ortamalama 50 olsa bile final notu en az 50 olmalıdır
 b-) Finalden 70 alındığında ortalamanın önemi olmasın.
+
 vize1 = float(input('Vize 1: '))
 vize2 = float(input('Vize 2: '))
 final1 = float(input('Final: '))
+
 ortalama = (((vize1 + vize2)/2)*0.6 + final1*0.4)
+
 result = (ortalama > 49) and (final1 > 49)
+
 print(f'Ortalama: {ortalama} Geçme durumunuz: {result}')
 ```
-**********************************************************************************
-6- Kişinin ad, kilo ve boy bilgilerini alıp kilo indekslerini hesaplayı
+
+6- Kişinin ad, kilo ve boy bilgilerini alıp kilo indekslerini hesaplayın
+```
        Formül: (Kilo / boy uzunluğunun karesi)
        Aşağıdaki tabloya göre kişi hangi gruba girmektedir.
        0-18.4 => Zayıf
        18.5-24.9 => Normal
        25.0-29.9 => Fazla Kilolu
        30.0-34.9 => Şişman (Obez)
+```
+```
 name = input('Adınız: ')
 kg = float(input('Kilonuz: '))
 hg = float(input('Boyunuz: ')) #Boy 1.73 şeklinde yazılmalıdır.
@@ -431,9 +440,14 @@ print(f'{name} kilo indeksin: {index} ve kilo değerlendirmen zayıf: {zayif}')
 print(f'{name} kilo indeksin: {index} ve kilo değerlendirmen normal: {normal}')
 print(f'{name} kilo indeksin: {index} ve kilo değerlendirmen kilolu: {kilolu}')
 print(f'{name} kilo indeksin: {index} ve kilo değerlendirmen obez: {obez}')
-Eğer Kilo:62 ve Boy:1.73 yazarsak normal: True olarak dönecektir.
 
-**********************************************************************************
+#Eğer Kilo:62 ve Boy:1.73 yazarsak normal: True olarak dönecektir.
+```
+
+
+
+
+```
 
 ##Identify Operator: is
 #x = y = [1, 2, 3]
@@ -463,7 +477,7 @@ name = 'Çınar'
 print('a' in name) #True döner yani 'a' değeri Çınar içerisinde bulunur.
 print('a' not in name) #False değerini döner 'a' değeri Çınar stringinde bulunur.
 
-**********************************************************************************
+
 if 3 > 2:
      print('HoşGeldin...') #Yazar.
 
@@ -475,9 +489,10 @@ if isLoggedin:
      print('aaaa') #'aaaa' değerini döndürür. Fakat 'False' yaparsak değer dönmez.
 
 
-**********************************************************************************
-
-
+```
+ 
+ 
+```
 username = 'memo'
 password = '1234'
 
@@ -489,8 +504,9 @@ if isLoggedin:
 else:
     print('Bilgileriniz yanlış') #Hatalı bilgiler olduğu için burayı basar.
 
-**********************************************************************************
+```
 
+```
 if (username=='memo') and (password=='1234'): #Kullanıcı adı ve şifre dpğru ise print içindeki ifadeyi basar.
     print('Şifre Doğru hoşgeldin.')
 
@@ -501,8 +517,10 @@ if (username=='memo'):
     else:
         print('Parolanız yanlış.') #Parola eğer yanlış olursa bir  if 'password' bloğuna geçer ve else bloğu çalışır. 
 
+```
 
-**********************************************************************************
+
+```
 x = int(input('x: '))
 y = int(input('y: '))
 
@@ -513,8 +531,10 @@ elif x==y:
 else:
     print('y x den büyük') #8 a 9 girilince else bloğu çalışır.
 
+```
 **********************************************************************************
 
+```
 num = int(input('sayı: '))
 
 if num > 0:
@@ -524,14 +544,16 @@ elif num < 0:
 else:
     print('Sayı sıfır') #(0) girilince bu blok çalışır
 
+```
+
 
 **********************************************************************************
 
 #1- Kullanıcıdan isim, yaş ve eğitim bilgilerini isteyip ehliyet alabilme
 #durumunu kontrol ediniz. Ehliyet alma kosulu en az 18 ve eğitim durumu
 #lise ya da üniversite olmalıdır. 
+```
 from unicodedata import name
-
 
 isim = input('isminiz: ')
 yas = int(input('Yaşınız: '))
@@ -552,6 +574,8 @@ else:
      print(f'{isim} yaşınızdan dolayı ehliyet alamazsınız.')
  
 
+```
+
 **********************************************************************************
 
 #2- Bir öğrencinin 2 yazılı bir sözlü notunu alıp hesaplanan ortalamaya göre
@@ -562,6 +586,8 @@ else:
 #  55-69 => 3
 #  70-84 => 4
 #  3 85-100 => 5
+
+```
 yazili1 = int(input('1.Yazılı: '))
 yazili2 = int(input('2.Yazılı: '))
 sozlu = int(input('Sözlü: '))
@@ -570,18 +596,25 @@ ortalama = (yazili1 + yazili2 + sozlu)/3
 
 if ortalama >= 0 and ortalama < 25:
     print(f'Ortalamanız : {ortalama} notunuz: 0')
+
 elif ortalama >=25 and ortalama < 45:
     print(f'Ortalamanız : {ortalama} notunuz: 1')
+
 elif ortalama >=45 and ortalama < 54:
     print(f'Ortalamanız : {ortalama} notunuz: 2')
+
 elif ortalama >= 55 and ortalama < 69:
     print(f'Ortalamanız : {ortalama} notunuz: 3')
+
 elif ortalama >= 70 and ortalama < 84:
     print(f'Ortalamanız : {ortalama} notunuz: 4')
+
 elif ortalama >= 85 and ortalama <=100:
     print(f'Ortalamanız : {ortalama} notunuz: 5')
 else:
     print('Yanlış bilgi girdiniz.')
+
+```
 
 
 **********************************************************************************
